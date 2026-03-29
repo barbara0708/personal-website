@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Strategist & Creative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'], }, colors: { bgLight: '#fcfcfc', textDark: '#222222', } } }
+        }
+    </script>
+</head>
+<body class="bg-bgLight text-textDark font-sans antialiased min-h-screen">
+
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-serif font-bold tracking-tighter hover:opacity-70 transition">✦</a>
+        <div class="space-x-8 text-sm">
+            <a href="about.html" class="font-medium border-b border-textDark pb-1">About</a>
+            <a href="mailto:your@email.com" class="hover:text-gray-500 transition">Contact</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row gap-12 md:gap-32">
+        
+        <div class="w-full md:w-1/4">
+            <h1 class="text-lg font-medium">About me</h1>
+        </div>
+
+        <div class="w-full md:w-3/4">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+                <img src="https://via.placeholder.com/400x500.png?text=Your+Photo+Here" alt="About Profile" class="w-full object-cover rounded-sm">
+                <div class="text-sm text-gray-700 space-y-6 leading-relaxed">
+                    <p>In my approach I blend creative direction, marketing operations, and strategic thinking to help brands grow with clarity.</p>
+                    <p>I've worked across digital marketing, UX, campaign coordination, and project management. Because of this hybrid background, I bridge strategy with execution: I understand how to brief creatives, optimize funnels, build pages, manage timelines, and make sure deliverables land on time and look like they belong together. I value <strong>clarity, aesthetics, and efficiency.</strong> If your brand needs a partner who can think, decide, and deliver — you're in the right place.</p>
+                    <p>Outside of work, I'm obsessed with languages, high-quality design, Nordic culture, long walks, and learning how people and businesses grow. Creativity and systems are my comfort zone — and I love helping others find theirs.</p>
+                </div>
+            </div>
+
+            <hr class="border-gray-200 mb-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 text-sm">
+                <div>
+                    <h2 class="font-medium mb-6">Services</h2>
+                    <ul class="text-gray-500 space-y-2">
+                        <li>Creative Strategy</li>
+                        <li>UX & Landing Pages</li>
+                        <li>Copy & Messaging</li>
+                        <li class="pt-4">Content Direction</li>
+                        <li>Campaign Coordination</li>
+                        <li>Marketing Operations</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-medium mb-6">Tools & systems</h2>
+                    <ul class="text-gray-500 space-y-2">
+                        <li>Notion</li>
+                        <li>Zapier</li>
+                        <li>Figma</li>
+                        <li>Google Analytics</li>
+                        <li>Looker Studio</li>
+                        <li>Framer</li>
+                        <li>Webflow</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-gray-200 mb-12">
+
+        </div>
+    </main>
+
+</body>
+</html>
