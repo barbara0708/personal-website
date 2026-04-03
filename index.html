@@ -17,94 +17,160 @@
                     colors: {
                         bgLight: '#fcfcfc',
                         textDark: '#222222',
-                        btnDark: '#2c303a',
+                        btnDark: '#212529', // Updated charcoal from reference
+                        btnHover: '#121417',
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Custom styles not easily done with Tailwind CDN */
+        .underline-line {
+            height: 1px;
+            background: linear-gradient(90deg, #ccc 0%, #ccc 50%, rgba(204,204,204,0) 100%);
+            margin-top: 1.5rem;
+        }
+    </style>
 </head>
 <body class="bg-bgLight text-textDark font-sans antialiased min-h-screen selection:bg-gray-200">
 
     <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
-        <div class="text-2xl font-serif font-bold tracking-tighter">✦</div>
-        <div class="space-x-8 text-sm">
+        <a href="index.html" class="text-2xl font-serif font-bold tracking-tighter flex items-center gap-1 hover:opacity-70 transition">
+            <span class="text-3xl">✦</span>
+        </a>
+        <div class="space-x-8 text-sm flex items-center">
             <a href="about.html" class="hover:text-gray-500 transition">About</a>
-            <a href="#" class="hover:text-gray-500 transition text-gray-400 cursor-not-allowed">Projects (Coming Soon)</a>
             <a href="mailto:your@email.com" class="hover:text-gray-500 transition">Contact</a>
         </div>
     </nav>
 
     <main class="max-w-6xl mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-32">
+        
+        <div class="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-12 items-start mb-32">
             <div>
-                <h1 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">turning scattered ideas into <span class="italic text-gray-500">clear plans</span></h1>
-                <p class="text-gray-600 max-w-sm">Strategy, campaign ops and creative direction for founders and small teams.</p>
+                <h1 class="text-4xl md:text-5xl font-serif mb-6 leading-tight max-w-lg">turning scattered ideas into <span class="italic text-gray-500">clear plans</span></h1>
+                <div class="underline-line max-w-sm mb-6"></div> <p class="text-gray-600 max-w-md">Strategy, campaign ops and creative direction for founders and small teams.</p>
             </div>
             <div class="flex flex-wrap gap-2 justify-start md:justify-end">
-                <span class="px-4 py-1 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Strategy</span>
-                <span class="px-4 py-1 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Marketing</span>
-                <span class="px-4 py-1 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Analytics</span>
-                <span class="px-4 py-1 border border-gray-300 rounded-full text-xs tracking-wider uppercase">UX & CX</span>
-                <span class="px-4 py-1 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Branding</span>
+                <span class="px-4 py-1.5 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Strategy</span>
+                <span class="px-4 py-1.5 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Marketing</span>
+                <span class="px-4 py-1.5 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Analytics</span>
+                <span class="px-4 py-1.5 border border-gray-300 rounded-full text-xs tracking-wider uppercase">UX & CX</span>
+                <span class="px-4 py-1.5 border border-gray-300 rounded-full text-xs tracking-wider uppercase">Branding</span>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-12 items-start mb-32">
             <div>
-                <h2 class="text-xs font-bold tracking-widest uppercase mb-6 text-gray-400">About Me</h2>
-                <p class="text-sm leading-relaxed mb-6">
+                <h2 class="text-xs font-bold tracking-widest uppercase mb-10 text-gray-400">About Me</h2>
+                <p class="text-sm leading-relaxed mb-6 max-w-lg">
                     I'm a strategist and project specialist helping small teams turn ideas into structured, executable marketing. I combine hands-on experience with clear systems across UX, marketing, and no-code workflows. I translate fuzzy goals into focused briefs, tight plans, and delivery-ready assets. I care about clarity, momentum, and work that actually ships.
                 </p>
             </div>
-            <div class="flex justify-center">
-                <img src="https://via.placeholder.com/400x500.png?text=Your+Photo+Here" alt="Profile" class="w-full max-w-[300px] object-cover rounded-sm grayscale hover:grayscale-0 transition duration-500">
-            </div>
-            <div class="text-right">
-                <a href="mailto:your@email.com" class="text-sm font-medium hover:text-gray-500 transition inline-flex items-center gap-1">
+            <div>
+                <img src="https://via.placeholder.com/400x500.png?text=Your+Photo+Here" alt="Profile" class="w-full max-w-[300px] object-cover rounded-sm grayscale hover:grayscale-0 transition duration-500 mb-8 mx-auto md:mx-0">
+                <a href="mailto:your@email.com" class="text-xs font-medium hover:text-gray-500 transition flex items-center gap-1 justify-center md:justify-start">
                     BOOK A FREE CLARITY CALL ↗
                 </a>
-                <div class="mt-8 text-xs text-gray-500">
-                    <a href="#" class="hover:text-textDark">LinkedIn</a> • @your_handle
+                <div class="mt-4 text-xs text-gray-500 text-center md:text-left">
+                    <a href="#" class="hover:text-textDark transition">Linkedin</a> • @your_handle
                 </div>
             </div>
         </div>
 
         <div class="mb-32">
-            <h2 class="text-xs font-bold tracking-widest uppercase mb-10 text-gray-400">Starter Packages</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="border border-gray-200 rounded-xl p-8 flex flex-col">
-                    <h3 class="font-medium mb-3">Campaign Project Management</h3>
-                    <p class="text-xs text-gray-500 mb-6">End-to-end coordination to launch campaigns without chaos</p>
-                    <ul class="text-xs space-y-3 mb-8 flex-grow">
-                        <li class="flex gap-2"><span>✓</span> Campaign coordination & delivery</li>
-                        <li class="flex gap-2"><span>✓</span> Project plan with milestones</li>
-                        <li class="flex gap-2"><span>✓</span> Brief checklist + status template</li>
-                    </ul>
-                    <a href="mailto:your@email.com" class="block w-full text-center bg-btnDark text-white text-xs py-3 rounded-md hover:bg-gray-800 transition">Discuss your campaign</a>
-                </div>
-                <div class="border border-gray-200 rounded-xl p-8 flex flex-col">
-                    <h3 class="font-medium mb-3">Marketing Systems Setup</h3>
-                    <p class="text-xs text-gray-500 mb-6">Simple tracking and systems so you know what's working</p>
-                    <ul class="text-xs space-y-3 mb-8 flex-grow">
-                        <li class="flex gap-2"><span>✓</span> Analytics & tracking setup</li>
-                        <li class="flex gap-2"><span>✓</span> Basic CRM setup</li>
-                        <li class="flex gap-2"><span>✓</span> Setup Marketing Automations</li>
-                    </ul>
-                    <a href="mailto:your@email.com" class="block w-full text-center bg-btnDark text-white text-xs py-3 rounded-md hover:bg-gray-800 transition">Tell Me More</a>
-                </div>
-                <div class="border border-gray-200 rounded-xl p-8 flex flex-col">
-                    <h3 class="font-medium mb-3">Creative Direction</h3>
-                    <p class="text-xs text-gray-500 mb-6">Clear visual direction so your brand looks consistent</p>
-                    <ul class="text-xs space-y-3 mb-8 flex-grow">
-                        <li class="flex gap-2"><span>✓</span> Creative brief & Brand Narrative</li>
-                        <li class="flex gap-2"><span>✓</span> 2 distinct campaign concepts</li>
-                        <li class="flex gap-2"><span>✓</span> Figma Visual System Kit</li>
-                    </ul>
-                    <a href="mailto:your@email.com" class="block w-full text-center bg-btnDark text-white text-xs py-3 rounded-md hover:bg-gray-800 transition">Tell Me More</a>
-                </div>
+            <p class="text-sm text-gray-500 mb-8 max-w-md">Core areas I work in most often:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Creative Strategy</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Marketing Operations</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Creative Direction</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">UX & Landing Pages</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Content Coordination</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Messaging</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Brand Positioning</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Tracking & Analytics</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Campaign Coordination</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Brand Strategy</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Content Marketing</span>
+                <span class="px-4 py-1.5 border border-gray-200 rounded-md text-center text-xs tracking-wider uppercase text-gray-600">Notion Systems</span>
             </div>
         </div>
+
+        <div class="mb-32">
+            <h2 class="text-xs font-bold tracking-widest uppercase mb-4 text-gray-400">Starter Packages</h2>
+            <p class="text-sm text-gray-500 mb-10 max-w-md">My core expertise covers...</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="border border-gray-200 rounded-xl p-10 flex flex-col h-full bg-white shadow-sm hover:shadow-md transition">
+                    <h3 class="text-sm font-semibold tracking-wider uppercase mb-3">Campaign Project Management</h3>
+                    <p class="text-xs text-gray-600 mb-8 flex-grow">End-to-end coordination to launch campaigns without chaos</p>
+                    <ul class="text-xs space-y-4 mb-10 flex-grow">
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Campaign coordination & delivery</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Project plan with milestones, owners, and deadlines.</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Brief checklist + daily/weekly status template</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Task board setup + initial task assignment</li>
+                    </ul>
+                    <a href="mailto:your@email.com" class="block w-full text-center bg-btnDark text-white text-xs py-3 rounded-md hover:bg-btnHover transition font-medium">Discuss your campaign</a>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-10 flex flex-col h-full bg-white shadow-sm hover:shadow-md transition">
+                    <h3 class="text-sm font-semibold tracking-wider uppercase mb-3">Marketing Systems Setup</h3>
+                    <p class="text-xs text-gray-600 mb-8 flex-grow">Simple tracking and systems so you know what's working</p>
+                    <ul class="text-xs space-y-4 mb-10 flex-grow">
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Analytics & tracking setup</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Basic CRM setup</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Setup Marketing Automations</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Lead capture flow audit</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Interactive dashboard with all analytics in Looker Studio</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Handover + action checklist</li>
+                    </ul>
+                    <a href="mailto:your@email.com" class="block w-full text-center bg-btnDark text-white text-xs py-3 rounded-md hover:bg-btnHover transition font-medium">Tell Me More</a>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-10 flex flex-col h-full bg-white shadow-sm hover:shadow-md transition">
+                    <h3 class="text-sm font-semibold tracking-wider uppercase mb-3">Creative Direction</h3>
+                    <p class="text-xs text-gray-600 mb-8 flex-grow">Clear visual direction so your brand looks consistent</p>
+                    <ul class="text-xs space-y-4 mb-10 flex-grow">
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Creative brief & Brand Narrative</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Creative project plan with schedule</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> 2 distinct campaign concepts</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Moodboards + 3 styleframes</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Figma Visual System Kit</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Canva social templates</li>
+                        <li class="flex gap-2 items-start"><span class="text-green-600">✓</span> Repurposing guide</li>
+                    </ul>
+                    <a href="mailto:your@email.com" class="block w-full text-center bg-btnDark text-white text-xs py-3 rounded-md hover:bg-btnHover transition font-medium">Tell Me More</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mb-32">
+            <h2 class="text-xs font-bold tracking-widest uppercase mb-4 text-gray-400">WHAT THEY SAID</h2>
+            <p class="text-sm text-gray-500 mb-12 max-w-sm">Clear thinker, reliable partner, and someone who actually gets things done.</p>
+            <div class="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-12 items-start">
+                
+                <div class="flex gap-6 items-start">
+                    <img src="https://via.placeholder.com/150x150.png?text=Thumbnail" alt="Task Board Screenshot" class="w-24 h-24 rounded-md object-cover flex-shrink-0 shadow-inner">
+                    <div class="text-sm space-y-4 leading-relaxed text-gray-700">
+                        <p>“She takes vague ideas and turns them into a plan the whole team understands.”</p>
+                        <p class="text-xs font-semibold tracking-wider uppercase text-gray-500 pt-2">CROSS-FUNCTIONAL COLLABORATOR</p>
+                        <p>“Strong sense of priorities, focuses on what actually moves the project forward.”</p>
+                        <p class="text-xs font-semibold tracking-wider uppercase text-gray-500 pt-2">CROSS-FUNCTIONAL COLLABORATOR</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 items-start">
+                     <div class="w-24 flex-shrink-0 md:hidden"></div> <div class="text-sm space-y-4 leading-relaxed text-gray-700 w-full">
+                        <p>“Very organized, calm under pressure, and always one step ahead.”</p>
+                        <p class="text-xs font-semibold tracking-wider uppercase text-gray-500 pt-2">ADVERTISING PROJECT LEAD</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
     </main>
 
 </body>
