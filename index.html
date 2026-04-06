@@ -20,14 +20,25 @@
             }
         }
     </script>
+    <style>
+        /* Minimalist animated underline for links */
+        .hover-underline { position: relative; display: inline-block; }
+        .hover-underline::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0);
+            height: 1px; bottom: -2px; left: 0; background-color: currentColor;
+            transform-origin: bottom right; transition: transform 0.3s ease-out;
+        }
+        .hover-underline:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+    </style>
 </head>
 <body class="bg-bgLight text-textDark font-sans antialiased min-h-screen selection:bg-textDark selection:text-bgLight">
 
     <nav class="max-w-6xl mx-auto px-6 py-10 flex justify-between items-center">
         <a href="index.html" class="text-3xl font-serif font-bold tracking-tighter hover:opacity-70 transition flex items-center justify-center w-10 h-10">✦</a>
-        <div class="space-x-8 text-sm font-medium text-textDark flex items-center">
-            <a href="about.html" class="hover:text-textMuted transition">About</a>
-            <a href="contact.html" class="hover:text-textMuted transition">Contact</a>
+        <div class="space-x-8 text-base font-medium text-textDark flex items-center">
+            <a href="index.html" class="border-b border-textDark pb-0.5">Home</a>
+            <a href="about.html" class="text-textMuted hover:text-textDark hover-underline">About</a>
+            <a href="contact.html" class="text-textMuted hover:text-textDark hover-underline">Contact</a>
         </div>
     </nav>
 
@@ -35,105 +46,92 @@
         
         <div class="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-12 items-start mb-32">
             <div>
-                <h1 class="text-[2.75rem] leading-[1.1] font-serif font-semibold text-textDark mb-6 max-w-2xl tracking-tight">
-                    turning messy ideas into clear systems and memorable creative
+                <h1 class="text-5xl md:text-6xl leading-[1.1] font-serif font-semibold text-textDark mb-6 max-w-2xl tracking-tight">
+                    turning scattered ideas into <span class="italic">clear plans</span>
                 </h1>
-                <p class="text-textMuted text-sm max-w-sm leading-relaxed">
+                <p class="text-textMuted text-lg max-w-md leading-relaxed">
                     Strategy, campaign ops and creative direction for founders and small teams.
                 </p>
             </div>
-            <div class="flex flex-wrap gap-2 justify-start md:justify-end content-start pt-2">
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Strategy</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Marketing</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Analytics</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">UX & CX</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Branding</span>
+            <div class="flex flex-wrap gap-2 justify-start md:justify-end content-start pt-3">
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Strategy</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Marketing</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Analytics</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">UX & CX</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Branding</span>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-32">
             <div>
-                <h2 class="text-[13px] font-semibold tracking-wide uppercase mb-6 text-textDark">ABOUT ME</h2>
-                <p class="text-[13px] leading-relaxed text-textMuted">
+                <h2 class="text-sm font-semibold tracking-widest uppercase mb-6 text-textDark">ABOUT ME</h2>
+                <p class="text-base leading-relaxed text-textMuted">
                     I'm a strategist and project specialist helping small teams turn ideas into structured, executable marketing. I combine hands-on experience with clear systems across UX, marketing, and no-code workflows. I translate fuzzy goals into focused briefs, tight plans, and delivery-ready assets. I care about clarity, momentum, and work that actually ships.
                 </p>
             </div>
             <div class="flex justify-center">
-                <img src="https://via.placeholder.com/500x500.png?text=Profile+Photo" alt="Profile" class="w-full max-w-[320px] aspect-square object-cover bg-gray-200">
+                <img src="https://via.placeholder.com/500x500.png?text=Profile+Photo" alt="Profile" class="w-full max-w-[320px] aspect-square object-cover bg-gray-200 shadow-sm rounded-sm">
             </div>
             <div class="text-right flex flex-col justify-between h-full md:min-h-[250px]">
-                <a href="contact.html" class="text-[11px] font-semibold tracking-wide uppercase text-textDark hover:text-textMuted transition inline-flex items-center justify-end gap-1">
+                <a href="contact.html" class="text-xs font-bold tracking-widest uppercase text-textDark hover:text-textMuted transition inline-flex items-center justify-end gap-1 hover-underline self-end">
                     BOOK A FREE CLARITY CALL ↗
                 </a>
-                <div class="mt-8 text-[11px] font-medium text-textMuted">
-                    <a href="#" class="text-textDark hover:underline">Linkedin</a> • @warwarapanova
+                <div class="mt-8 text-sm font-medium text-textMuted">
+                    <a href="#" class="text-textDark hover-underline">Linkedin</a> • @warwarapanova
                 </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-12 items-start mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-12 items-center mb-32 border-y border-borderMuted py-16">
             <div>
-                 <p class="text-[13px] text-textMuted">Core areas I work in most often:</p>
+                 <p class="text-base text-textMuted font-medium">Core areas I work in most often:</p>
             </div>
-            <div class="flex flex-wrap gap-2.5">
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Creative Strategy</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Marketing Operations</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Creative Direction</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">UX & Landing Pages</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Content Coordination</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Messaging</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Brand Positioning</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Tracking & Analytics</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Campaign Coordination</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Brand Strategy</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Content Marketing</span>
-                <span class="px-3 py-1.5 bg-white border border-borderMuted rounded-md shadow-tag text-[10px] font-semibold tracking-wider uppercase text-textDark">Notion Systems</span>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Creative Strategy</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Marketing Operations</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Creative Direction</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">UX & Landing Pages</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Content Coordination</span>
+                <span class="px-4 py-2 bg-white border border-borderMuted rounded-md shadow-tag text-xs font-semibold tracking-wider uppercase text-textDark">Brand Positioning</span>
             </div>
         </div>
 
         <div class="mb-32">
-            <h2 class="text-[15px] font-medium uppercase tracking-wide mb-4 text-textDark">STARTER PACKAGES</h2>
-            <p class="text-[13px] text-textMuted mb-10">My core expertise covers...</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <h2 class="text-sm font-bold uppercase tracking-widest mb-4 text-textDark">STARTER PACKAGES</h2>
+            <p class="text-base text-textMuted mb-12">My core expertise covers...</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="border border-borderMuted rounded-lg p-8 flex flex-col h-full bg-white shadow-sm">
-                    <h3 class="text-[15px] font-medium text-textDark mb-4">Campaign Project Management</h3>
-                    <p class="text-[13px] text-textMuted mb-8 flex-grow leading-relaxed">End-to-end coordination to launch campaigns without chaos</p>
-                    <ul class="text-[12px] text-textDark space-y-4 mb-10 flex-grow font-medium">
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Campaign coordination & delivery</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Project plan with milestones, owners, and deadlines.</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Brief checklist + daily/weekly status template</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Task board setup + initial task assignment</span></li>
+                <div class="border border-borderMuted rounded-xl p-8 flex flex-col h-full bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                    <h3 class="text-lg font-semibold text-textDark mb-4">Campaign Project Management</h3>
+                    <p class="text-base text-textMuted mb-8 flex-grow leading-relaxed">End-to-end coordination to launch campaigns without chaos</p>
+                    <ul class="text-sm text-textDark space-y-4 mb-10 flex-grow font-medium">
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Campaign coordination & delivery</span></li>
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Project plan with milestones & deadlines</span></li>
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Brief checklist + daily status template</span></li>
                     </ul>
-                    <a href="contact.html" class="block w-full text-center bg-btnDark text-bgLight text-[12px] font-medium tracking-wide py-3.5 rounded-sm hover:bg-btnHover transition">Discuss your campaign</a>
+                    <a href="contact.html" class="block w-full text-center bg-btnDark text-bgLight text-xs font-bold tracking-widest uppercase py-4 rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-btnHover">Discuss campaign</a>
                 </div>
 
-                <div class="border border-borderMuted rounded-lg p-8 flex flex-col h-full bg-white shadow-sm">
-                    <h3 class="text-[15px] font-medium text-textDark mb-4">Marketing Systems Setup</h3>
-                    <p class="text-[13px] text-textMuted mb-8 flex-grow leading-relaxed">Simple tracking and systems so you know what's working</p>
-                    <ul class="text-[12px] text-textDark space-y-4 mb-10 flex-grow font-medium">
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Analytics & tracking setup</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Basic CRM setup</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Setup Marketing Automations</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Lead capture flow audit</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Looker Studio Dashboard</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Handover + action checklist</span></li>
+                <div class="border border-borderMuted rounded-xl p-8 flex flex-col h-full bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                    <h3 class="text-lg font-semibold text-textDark mb-4">Marketing Systems Setup</h3>
+                    <p class="text-base text-textMuted mb-8 flex-grow leading-relaxed">Simple tracking and systems so you know what's working</p>
+                    <ul class="text-sm text-textDark space-y-4 mb-10 flex-grow font-medium">
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Analytics & tracking setup</span></li>
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Basic CRM setup & automations</span></li>
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Interactive Looker Studio Dashboard</span></li>
                     </ul>
-                    <a href="contact.html" class="block w-full text-center bg-btnDark text-bgLight text-[12px] font-medium tracking-wide py-3.5 rounded-sm hover:bg-btnHover transition">Tell Me More</a>
+                    <a href="contact.html" class="block w-full text-center bg-btnDark text-bgLight text-xs font-bold tracking-widest uppercase py-4 rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-btnHover">Tell Me More</a>
                 </div>
 
-                <div class="border border-borderMuted rounded-lg p-8 flex flex-col h-full bg-white shadow-sm">
-                    <h3 class="text-[15px] font-medium text-textDark mb-4">Creative Direction</h3>
-                    <p class="text-[13px] text-textMuted mb-8 flex-grow leading-relaxed">Clear visual direction so your brand looks consistent</p>
-                    <ul class="text-[12px] text-textDark space-y-4 mb-10 flex-grow font-medium">
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Creative brief & Brand Narrative</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Creative project plan with schedule</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>2 distinct campaign concepts</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Moodboards + 3 styleframes</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Figma Visual System Kit</span></li>
-                        <li class="flex gap-3 items-start"><span class="mt-0.5 text-[10px]">✓</span> <span>Canva social templates</span></li>
+                <div class="border border-borderMuted rounded-xl p-8 flex flex-col h-full bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                    <h3 class="text-lg font-semibold text-textDark mb-4">Creative Direction</h3>
+                    <p class="text-base text-textMuted mb-8 flex-grow leading-relaxed">Clear visual direction so your brand looks consistent</p>
+                    <ul class="text-sm text-textDark space-y-4 mb-10 flex-grow font-medium">
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Creative brief & Brand Narrative</span></li>
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>2 distinct campaign concepts</span></li>
+                        <li class="flex gap-3 items-start"><span class="mt-0.5 opacity-70">✓</span> <span>Figma Visual System Kit</span></li>
                     </ul>
-                    <a href="contact.html" class="block w-full text-center bg-btnDark text-bgLight text-[12px] font-medium tracking-wide py-3.5 rounded-sm hover:bg-btnHover transition">Tell Me More</a>
+                    <a href="contact.html" class="block w-full text-center bg-btnDark text-bgLight text-xs font-bold tracking-widest uppercase py-4 rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-btnHover">Tell Me More</a>
                 </div>
 
             </div>
