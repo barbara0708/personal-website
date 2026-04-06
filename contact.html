@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Strategist & Creative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'], },
+                    colors: {
+                        bgLight: '#F9FAF7', textDark: '#131B62', textMuted: '#3A4480', 
+                        btnDark: '#131B62', btnHover: '#0C1140', borderMuted: 'rgba(19, 27, 98, 0.2)', 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bgLight text-textDark font-sans antialiased min-h-screen selection:bg-textDark selection:text-bgLight flex flex-col">
+
+    <nav class="max-w-6xl mx-auto px-6 py-10 flex justify-between items-center w-full">
+        <a href="index.html" class="text-3xl font-serif font-bold tracking-tighter hover:opacity-70 transition flex items-center justify-center w-10 h-10">✦</a>
+        <div class="space-x-8 text-sm font-medium text-textDark flex items-center">
+            <a href="about.html" class="hover:text-textMuted transition">About</a>
+            <a href="contact.html" class="border-b border-textDark pb-0.5">Contact</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-24 w-full flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-start">
+            
+            <div>
+                <h1 class="text-3xl md:text-4xl font-serif mb-4 text-textDark">Let's craft a narrative.</h1>
+                <p class="text-[14px] text-textMuted mb-12 max-w-md leading-relaxed">Reach out for collaborations, editorial inquiries, or project bookings.</p>
+                
+                <form name="contact" method="POST" data-netlify="true" class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label for="name" class="block text-[10px] font-bold tracking-widest uppercase mb-2 text-textMuted">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Elias Thorne" required class="w-full bg-transparent border-b border-borderMuted py-2 focus:outline-none focus:border-textDark placeholder-gray-400 text-[14px] transition-colors">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-[10px] font-bold tracking-widest uppercase mb-2 text-textMuted">Email</label>
+                            <input type="email" id="email" name="email" placeholder="elias@studio.com" required class="w-full bg-transparent border-b border-borderMuted py-2 focus:outline-none focus:border-textDark placeholder-gray-400 text-[14px] transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-[10px] font-bold tracking-widest uppercase mb-2 text-textMuted">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your vision..." required class="w-full bg-transparent border-b border-borderMuted py-2 focus:outline-none focus:border-textDark placeholder-gray-400 text-[14px] resize-none transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="bg-btnDark text-bgLight px-8 py-3.5 text-[11px] font-bold tracking-widest uppercase rounded-sm hover:bg-btnHover transition inline-flex items-center gap-2 mt-4">
+                        Send Inquiry <span class="text-lg leading-none">→</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="flex flex-col justify-center h-full pt-8 md:pt-0">
+                <h2 class="text-[18px] font-medium mb-6 text-textDark">GET IN TOUCH</h2>
+                <a href="mailto:warwarapanova07@gmail.com" class="text-[14px] text-textMuted hover:text-textDark transition mb-12 block">warwarapanova07@gmail.com</a>
+                
+                <div class="flex flex-wrap gap-6 text-[11px] font-bold tracking-widest uppercase text-textMuted">
+                    <a href="#" class="hover:text-textDark transition inline-flex items-center gap-1">Instagram ↗</a>
+                    <a href="#" class="hover:text-textDark transition inline-flex items-center gap-1">Linkedin ↗</a>
+                    <a href="#" class="hover:text-textDark transition inline-flex items-center gap-1">Twitter ↗</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
